@@ -1,0 +1,38 @@
+/**
+(Square of Asterisks) Write an application that prompts the user to enter the size of the side of a square, then displays a hollow square of that size made of asterisks. Your program should work for squares of all side lengths between 1 and 20.
+
+Enter·the·size·of·the·asterisk·square·from·1-20:3↵
+***↵
+*·*↵
+***↵
+
+*/
+
+import java.util.Scanner;
+
+public class AsteriskSquare{
+	public static void main(String args[]){
+	int numLine=1,numColume=1,num;
+	Scanner input=new Scanner(System.in);
+	
+	System.out.print("Enter the size of the asterisk square from 1-20:");
+	num=input.nextInt();
+	
+		while (numLine<=num) {	
+				numColume=1;
+				while (numColume<=num){
+					
+					if (numLine==1||numColume==1||numLine==num||numColume==num){
+						System.out.print("*");	
+					}
+					else {
+						System.out.print(" ");
+					}
+					numColume++;
+				}
+			System.out.println();
+		
+			numLine++;					
+		}	
+	}
+}
