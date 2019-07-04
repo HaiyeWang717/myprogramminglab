@@ -1,0 +1,28 @@
+/**
+(Sides of a Triangle) Write an application that reads three nonzero values entered by the user and determines and prints whether they could represent the sides of a triangle. 
+*/
+
+import java.util.Scanner;
+
+public class TriangleYN{
+	public static void main(String args[]){
+		
+		double a,b,c;
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter three sizes, separated by spaces(decimals values are acceptable):");
+		a=input.nextDouble();
+		b=input.nextDouble();
+		c=input.nextDouble();
+		
+		if ((a+b>c) && (a+c>b)&&(b+c>a)) {
+			
+				System.out.format("A triangle could measure %.2f, %.2f, by %.2f.%n",a,b,c);
+		}	
+		else {
+				System.out.format("A triangle could not measure %.2f, %.2f, by %.2f.%n",a,b,c);
+			}
+		
+		
+	}
+}
+	
